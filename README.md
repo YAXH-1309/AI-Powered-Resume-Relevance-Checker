@@ -1,16 +1,10 @@
-Of course. Here is a complete, professional `README.md` file for your project.
-
-You can copy this entire text and paste it into the `README.md` file in your VS Code project or directly edit the file on GitHub.
-
------
-
 # AI-Powered Resume Relevance Checker 🚀
 
 [](https://ai-powered-resume-relevance-checker-hxu7qsunemxa5ckaiak7sr.streamlit.app/)
 
 This project is a submission for the **Code4Edtech Challenge by Innomatics Research Labs**. It's an AI-powered web application designed to automate the time-consuming process of resume screening, providing instant, actionable insights for both recruiters and students.
 
-## लाइव डेमो (Live Demo)
+## Live Demo
 
 You can access the live, deployed application here:
 **[https://ai-powered-resume-relevance-checker-hxu7qsunemxa5ckaiak7sr.streamlit.app/](https://ai-powered-resume-relevance-checker-hxu7qsunemxa5ckaiak7sr.streamlit.app/)**
