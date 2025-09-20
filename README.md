@@ -11,7 +11,7 @@ You can access the live, deployed application here:
 
 ## 🎥 Presentation Video
 
-*[Insert a link to your 15-30 minute YouTube presentation video here after you record it.]*
+https://youtu.be/aCuio5EWeZ0?si=O4P7o7x1q3B4eoCi
 
 ## ✨ Key Features
 
