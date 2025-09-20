@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Resume Relevance Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI-Powered Resume Relevance Checker</h1>
+            <p class="subtitle">Analyze your resume against job descriptions to get actionable feedback</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <form id="analysis-form" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="resume">Upload Resume</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="resume" name="resume" accept=".pdf,.docx,.txt" required>
+                            <div class="file-input-display">
+                                <span class="file-placeholder">Choose a file (PDF, DOCX, or TXT)</span>
+                                <button type="button" class="file-button">Browse</button>
+                            </div>
+                        </div>
+                        <small>Maximum file size: 16MB</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="job_description">Job Description</label>
+                        <textarea 
+                            id="job_description" 
+                            name="job_description" 
+                            placeholder="Paste the job description here..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" id="analyze-btn" class="analyze-btn">
+                        <span class="btn-text">Analyze Resume</span>
+                        <span class="loader" style="display: none;"></span>
+                    </button>
+                </form>
+            </div>
+
+            <div id="results-section" class="results-section" style="display: none;">
+                <h2>Analysis Results</h2>
+                
+                <div class="score-display">
+                    <div class="score-circle">
+                        <span id="score-value">0</span>
+                        <span class="score-suffix">%</span>
+                    </div>
+                    <div class="score-label">Relevance Score</div>
+                </div>
+
+                <div id="summary" class="summary-box"></div>
+
+                <div class="results-grid">
+                    <div class="result-card">
+                        <h3>✅ Strengths</h3>
+                        <ul id="strengths-list"></ul>
+                    </div>
+
+                    <div class="result-card">
+                        <h3>⚠️ Areas for Improvement</h3>
+                        <ul id="gaps-list"></ul>
+                    </div>
+
+                    <div class="result-card">
+                        <h3>💡 Recommendations</h3>
+                        <ul id="recommendations-list"></ul>
+                    </div>
+
+                    <div class="result-card">
+                        <h3>🎯 Skills Matched</h3>
+                        <div id="matched-skills" class="skills-tags"></div>
+                    </div>
+
+                    <div class="result-card">
+                        <h3>📚 Missing Skills</h3>
+                        <div id="missing-skills" class="skills-tags"></div>
+                    </div>
+                </div>
+
+                <button id="new-analysis-btn" class="secondary-btn">Analyze Another Resume</button>
+            </div>
+
+            <div id="error-message" class="error-message" style="display: none;"></div>
+        </main>
+
+        <footer>
+            <p>Built for Code4Edtech Hackathon | <a href="https://github.com/YAXH-1309/AI-Powered-Resume-Relevance-Checker">View on GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
